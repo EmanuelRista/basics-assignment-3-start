@@ -13,7 +13,8 @@
       <br><br>
       <p *ngIf="passwordIsVisible">{{ getSecretPassword() }}</p>
       <br><br>
-      <div [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}" *ngFor="let logItem of log">{{ logItem }}</div>
+      <div [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+        *ngFor="let logItem of log; let i = index">{{ logItem }}</div>
     </div>
   </div>
 </div>
